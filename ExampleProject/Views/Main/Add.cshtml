@@ -1,0 +1,67 @@
+﻿@model ExampleProject.Models.User
+@{
+    ViewData["Title"] = "Add";
+}
+
+<form class="form-group" method="post">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-2" style="text-decoration: underline;">
+                <h5>Ad:</h5>
+                <h5>Soyad:</h5>
+                <h5>Adres:</h5>
+                <h5>Email:</h5>
+                <h5>Telefon:</h5>
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control" name="UserName" />
+                <input type="text" class="form-control" name="SurName" />
+                <input type="text" class="form-control" name="Address" />
+                <input type="text" class="form-control" style="text-decoration: underline;" name="Email" />
+                <input type="text" class="form-control" name="Phone" />
+            </div>
+            <div class="col-2" style="text-decoration: underline;">
+                <h5>Fatura Tarihi:</h5>
+                <h5>Fatura No:</h5>
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control" name="BillNumber" />
+                <input type="text" class="form-control" name="BillDate" />
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col"><u>Ürün Adı</u></div>
+            <div class="col" style="text-decoration: underline;">Ürün Adedi</div>
+            <div class="col" style="text-decoration: underline;">Birim Fiyat</div>
+            <div class="col" style="text-decoration: underline;">Toplam</div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" name="Name" />
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="Quantity" />
+            </div>
+            <div class="col">
+                <input type="text" class="form-control " name="UnitPrice" />
+            </div>
+            <div class="col" style="background-color:grey">
+                <h1>@ViewBag.Total</h1>
+            </div>
+        </div>
+
+    </div>
+    <div style="margin-top:20px">
+        <button class="btn btn-info">Ekle</button>
+    </div>
+</form>
+
+<div class="row">
+    <div class="col" style="float:right"></div>
+    <h5>Genel Toplam: </h5>
+    <div class="col-5" style="float:right;background-color:grey">
+        <h5>@ViewBag.Total</h5>
+    </div>
+</div>
